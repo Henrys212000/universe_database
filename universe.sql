@@ -1,3 +1,7 @@
+psql --username=freecodecamp --dbname=postgres
+
+\c universe
+
 CREATE TABLE galaxy (
     galaxy_id SERIAL PRIMARY KEY,
     name VARCHAR(255) NOT NULL UNIQUE,
@@ -75,3 +79,5 @@ INSERT INTO satellite (name, launch_year, is_artificial, planet_id) VALUES
 ('Voyager 1', 1977, true, 1),
 ('Hubble Space Telescope', 1990, true, 1)
 ON CONFLICT (name) DO NOTHING;
+
+
